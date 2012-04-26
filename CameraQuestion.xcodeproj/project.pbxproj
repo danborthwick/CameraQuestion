@@ -20,7 +20,15 @@
 		2A83BF2C154871FA00DBBE24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A83BF09154871F900DBBE24 /* UIKit.framework */; };
 		2A83BF2D154871FA00DBBE24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A83BF0B154871F900DBBE24 /* Foundation.framework */; };
 		2A83BF35154871FA00DBBE24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A83BF33154871FA00DBBE24 /* InfoPlist.strings */; };
-		2A83BF38154871FA00DBBE24 /* CameraQuestionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A83BF37154871FA00DBBE24 /* CameraQuestionTests.m */; };
+		2A83BF45154873DB00DBBE24 /* WorldPlanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A83BF44154873DA00DBBE24 /* WorldPlanView.m */; };
+		2A83BF48154874E700DBBE24 /* WorldModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A83BF47154874E700DBBE24 /* WorldModel.m */; };
+		2A83BF4E1548959900DBBE24 /* CameraModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A83BF4D1548959900DBBE24 /* CameraModel.m */; };
+		2A83BF5115489ADB00DBBE24 /* CameraModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A83BF5015489ADB00DBBE24 /* CameraModelTests.m */; };
+		2A83BF5315489CD200DBBE24 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A83BF5215489CD200DBBE24 /* OCHamcrestIOS.framework */; };
+		2A83BF561548A0CD00DBBE24 /* CameraRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A83BF551548A0CD00DBBE24 /* CameraRenderer.m */; };
+		2A83BF591548AF2700DBBE24 /* AvatarDragController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A83BF581548AF2700DBBE24 /* AvatarDragController.m */; };
+		2A83BF5C1548BEE100DBBE24 /* CameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A83BF5B1548BEE100DBBE24 /* CameraController.m */; };
+		2A83BF5F1548C86300DBBE24 /* VectorGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A83BF5E1548C86300DBBE24 /* VectorGeometry.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,22 +46,37 @@
 		2A83BF09154871F900DBBE24 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2A83BF0B154871F900DBBE24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2A83BF0D154871F900DBBE24 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2A83BF11154871F900DBBE24 /* CameraQuestion-Info.plist */ = {isa = PBXFileReference; path = "CameraQuestion-Info.plist"; sourceTree = "<group>"; };
+		2A83BF11154871F900DBBE24 /* CameraQuestion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CameraQuestion-Info.plist"; sourceTree = "<group>"; };
 		2A83BF13154871F900DBBE24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2A83BF15154871F900DBBE24 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2A83BF17154871F900DBBE24 /* CameraQuestion-Prefix.pch */ = {isa = PBXFileReference; path = "CameraQuestion-Prefix.pch"; sourceTree = "<group>"; };
-		2A83BF18154871F900DBBE24 /* NMAppDelegate.h */ = {isa = PBXFileReference; path = NMAppDelegate.h; sourceTree = "<group>"; };
+		2A83BF17154871F900DBBE24 /* CameraQuestion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CameraQuestion-Prefix.pch"; sourceTree = "<group>"; };
+		2A83BF18154871F900DBBE24 /* NMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMAppDelegate.h; sourceTree = "<group>"; };
 		2A83BF19154871F900DBBE24 /* NMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMAppDelegate.m; sourceTree = "<group>"; };
 		2A83BF1C154871F900DBBE24 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		2A83BF1F154871F900DBBE24 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		2A83BF21154871F900DBBE24 /* NMViewController.h */ = {isa = PBXFileReference; path = NMViewController.h; sourceTree = "<group>"; };
+		2A83BF21154871F900DBBE24 /* NMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMViewController.h; sourceTree = "<group>"; };
 		2A83BF22154871F900DBBE24 /* NMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMViewController.m; sourceTree = "<group>"; };
 		2A83BF29154871FA00DBBE24 /* CameraQuestionTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CameraQuestionTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A83BF2A154871FA00DBBE24 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		2A83BF32154871FA00DBBE24 /* CameraQuestionTests-Info.plist */ = {isa = PBXFileReference; path = "CameraQuestionTests-Info.plist"; sourceTree = "<group>"; };
+		2A83BF32154871FA00DBBE24 /* CameraQuestionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CameraQuestionTests-Info.plist"; sourceTree = "<group>"; };
 		2A83BF34154871FA00DBBE24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2A83BF36154871FA00DBBE24 /* CameraQuestionTests.h */ = {isa = PBXFileReference; path = CameraQuestionTests.h; sourceTree = "<group>"; };
-		2A83BF37154871FA00DBBE24 /* CameraQuestionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraQuestionTests.m; sourceTree = "<group>"; };
+		2A83BF43154873DA00DBBE24 /* WorldPlanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldPlanView.h; sourceTree = "<group>"; };
+		2A83BF44154873DA00DBBE24 /* WorldPlanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldPlanView.m; sourceTree = "<group>"; };
+		2A83BF46154874E700DBBE24 /* WorldModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldModel.h; sourceTree = "<group>"; };
+		2A83BF47154874E700DBBE24 /* WorldModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldModel.m; sourceTree = "<group>"; };
+		2A83BF4C1548959900DBBE24 /* CameraModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraModel.h; path = ../CameraModel.h; sourceTree = "<group>"; };
+		2A83BF4D1548959900DBBE24 /* CameraModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraModel.m; path = ../CameraModel.m; sourceTree = "<group>"; };
+		2A83BF4F15489ADB00DBBE24 /* CameraModelTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraModelTests.h; sourceTree = "<group>"; };
+		2A83BF5015489ADB00DBBE24 /* CameraModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraModelTests.m; sourceTree = "<group>"; };
+		2A83BF5215489CD200DBBE24 /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrestIOS.framework; path = "../Unit Test Test/OCHamcrest-1.7/OCHamcrestIOS.framework"; sourceTree = "<group>"; };
+		2A83BF541548A0CD00DBBE24 /* CameraRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraRenderer.h; path = ../CameraRenderer.h; sourceTree = "<group>"; };
+		2A83BF551548A0CD00DBBE24 /* CameraRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraRenderer.m; path = ../CameraRenderer.m; sourceTree = "<group>"; };
+		2A83BF571548AF2700DBBE24 /* AvatarDragController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarDragController.h; sourceTree = "<group>"; };
+		2A83BF581548AF2700DBBE24 /* AvatarDragController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarDragController.m; sourceTree = "<group>"; };
+		2A83BF5A1548BEE100DBBE24 /* CameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraController.h; sourceTree = "<group>"; };
+		2A83BF5B1548BEE100DBBE24 /* CameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraController.m; sourceTree = "<group>"; };
+		2A83BF5D1548C86300DBBE24 /* VectorGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VectorGeometry.h; sourceTree = "<group>"; };
+		2A83BF5E1548C86300DBBE24 /* VectorGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VectorGeometry.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +97,7 @@
 				2A83BF2B154871FA00DBBE24 /* SenTestingKit.framework in Frameworks */,
 				2A83BF2C154871FA00DBBE24 /* UIKit.framework in Frameworks */,
 				2A83BF2D154871FA00DBBE24 /* Foundation.framework in Frameworks */,
+				2A83BF5315489CD200DBBE24 /* OCHamcrestIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +126,7 @@
 		2A83BF08154871F900DBBE24 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2A83BF5215489CD200DBBE24 /* OCHamcrestIOS.framework */,
 				2A83BF09154871F900DBBE24 /* UIKit.framework */,
 				2A83BF0B154871F900DBBE24 /* Foundation.framework */,
 				2A83BF0D154871F900DBBE24 /* CoreGraphics.framework */,
@@ -113,6 +138,10 @@
 		2A83BF0F154871F900DBBE24 /* CameraQuestion */ = {
 			isa = PBXGroup;
 			children = (
+				2A83BF541548A0CD00DBBE24 /* CameraRenderer.h */,
+				2A83BF551548A0CD00DBBE24 /* CameraRenderer.m */,
+				2A83BF4C1548959900DBBE24 /* CameraModel.h */,
+				2A83BF4D1548959900DBBE24 /* CameraModel.m */,
 				2A83BF18154871F900DBBE24 /* NMAppDelegate.h */,
 				2A83BF19154871F900DBBE24 /* NMAppDelegate.m */,
 				2A83BF1B154871F900DBBE24 /* MainStoryboard_iPhone.storyboard */,
@@ -120,6 +149,16 @@
 				2A83BF21154871F900DBBE24 /* NMViewController.h */,
 				2A83BF22154871F900DBBE24 /* NMViewController.m */,
 				2A83BF10154871F900DBBE24 /* Supporting Files */,
+				2A83BF43154873DA00DBBE24 /* WorldPlanView.h */,
+				2A83BF44154873DA00DBBE24 /* WorldPlanView.m */,
+				2A83BF46154874E700DBBE24 /* WorldModel.h */,
+				2A83BF47154874E700DBBE24 /* WorldModel.m */,
+				2A83BF571548AF2700DBBE24 /* AvatarDragController.h */,
+				2A83BF5A1548BEE100DBBE24 /* CameraController.h */,
+				2A83BF5B1548BEE100DBBE24 /* CameraController.m */,
+				2A83BF581548AF2700DBBE24 /* AvatarDragController.m */,
+				2A83BF5D1548C86300DBBE24 /* VectorGeometry.h */,
+				2A83BF5E1548C86300DBBE24 /* VectorGeometry.m */,
 			);
 			path = CameraQuestion;
 			sourceTree = "<group>";
@@ -138,9 +177,9 @@
 		2A83BF30154871FA00DBBE24 /* CameraQuestionTests */ = {
 			isa = PBXGroup;
 			children = (
-				2A83BF36154871FA00DBBE24 /* CameraQuestionTests.h */,
-				2A83BF37154871FA00DBBE24 /* CameraQuestionTests.m */,
 				2A83BF31154871FA00DBBE24 /* Supporting Files */,
+				2A83BF4F15489ADB00DBBE24 /* CameraModelTests.h */,
+				2A83BF5015489ADB00DBBE24 /* CameraModelTests.m */,
 			);
 			path = CameraQuestionTests;
 			sourceTree = "<group>";
@@ -264,6 +303,13 @@
 				2A83BF16154871F900DBBE24 /* main.m in Sources */,
 				2A83BF1A154871F900DBBE24 /* NMAppDelegate.m in Sources */,
 				2A83BF23154871F900DBBE24 /* NMViewController.m in Sources */,
+				2A83BF45154873DB00DBBE24 /* WorldPlanView.m in Sources */,
+				2A83BF48154874E700DBBE24 /* WorldModel.m in Sources */,
+				2A83BF4E1548959900DBBE24 /* CameraModel.m in Sources */,
+				2A83BF561548A0CD00DBBE24 /* CameraRenderer.m in Sources */,
+				2A83BF591548AF2700DBBE24 /* AvatarDragController.m in Sources */,
+				2A83BF5C1548BEE100DBBE24 /* CameraController.m in Sources */,
+				2A83BF5F1548C86300DBBE24 /* VectorGeometry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A83BF38154871FA00DBBE24 /* CameraQuestionTests.m in Sources */,
+				2A83BF5115489ADB00DBBE24 /* CameraModelTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +421,7 @@
 				GCC_PREFIX_HEADER = "CameraQuestion/CameraQuestion-Prefix.pch";
 				INFOPLIST_FILE = "CameraQuestion/CameraQuestion-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -386,6 +433,7 @@
 				GCC_PREFIX_HEADER = "CameraQuestion/CameraQuestion-Prefix.pch";
 				INFOPLIST_FILE = "CameraQuestion/CameraQuestion-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -397,6 +445,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)/../Unit Test Test/OCHamcrest-1.7\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CameraQuestion/CameraQuestion-Prefix.pch";
@@ -414,6 +463,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)/../Unit Test Test/OCHamcrest-1.7\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CameraQuestion/CameraQuestion-Prefix.pch";
