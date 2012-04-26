@@ -12,15 +12,31 @@
 {
     CGPoint mPosition;
     CGPoint mLookAtPoint;
+    float mFieldOfViewInRadians;
 }
 
 @end
 
 @implementation CameraModel
 
+- (id) init
+{
+    self = [super init];
+    if (self)
+    {
+        mFieldOfViewInRadians = M_PI_2;
+    }
+    return self;
+}
+
 - (float) fieldOfViewInRadians
 {
-    return M_PI_2;
+    return mFieldOfViewInRadians;
+}
+
+- (void) setFieldOfViewTo:(float)fieldOfViewInRadians
+{
+    mFieldOfViewInRadians = fieldOfViewInRadians;
 }
 
 - (const CGPoint) position

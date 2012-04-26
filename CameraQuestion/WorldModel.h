@@ -20,5 +20,6 @@
 - (const CGPoint) positionOfAvatar;
 
 - (void) moveAvatarTo:(const CGPoint)position;
+- (void) setCameraFieldOfViewTo:(float)fieldOfView;
 
 @end

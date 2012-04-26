@@ -11,6 +11,7 @@
 @interface CameraModel : NSObject
 
 - (float) fieldOfViewInRadians;
+- (void) setFieldOfViewTo:(float)fieldOfViewInRadians;
 
 - (const CGPoint) position;
 - (const CGPoint) lookAtPoint;

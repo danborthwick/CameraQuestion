@@ -9,6 +9,7 @@
 #import "WorldPlanView.h"
 
 #include "AvatarDragController.h"
+#include "CameraFieldOfViewController.h"
 #include "CameraRenderer.h"
 #include "WorldModel.h"
 
@@ -19,6 +20,7 @@ const int cPoleRadius = 10;
 @property (nonatomic, retain) WorldModel* mModel;
 @property (nonatomic, retain) CameraRenderer* mCameraRenderer;
 @property (nonatomic, retain) AvatarDragController* mAvatarDragController;
+@property (nonatomic, retain) CameraFieldOfViewController* mCameraFieldOfViewController;
 
 - (void) drawPole:(CGContextRef)c;
 - (CGRect) boundsForViewOfPoleAt:(CGPoint)position;
@@ -35,6 +37,7 @@ const int cPoleRadius = 10;
 @synthesize mModel;
 @synthesize mCameraRenderer;
 @synthesize mAvatarDragController;
+@synthesize mCameraFieldOfViewController;
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -42,7 +45,9 @@ const int cPoleRadius = 10;
     if (self) {
         mModel = [[WorldModel alloc] init];
         mCameraRenderer = [[CameraRenderer alloc] init];
+        
         mAvatarDragController = [[AvatarDragController alloc] initWithView:self andModel:mModel];
+        mCameraFieldOfViewController = [[CameraFieldOfViewController alloc] initWithView:self andModel:mModel];
     }
     return self;
 }

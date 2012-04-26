@@ -12,10 +12,8 @@
 {
     CGPoint mPositionOfAvatarAtStartOfDrag;
 }
-@property (retain) UIView* mView;
-@property (retain) WorldModel* mWorldModel;
 
-- (void)setupPanRecognizerWithView:(UIView *)view;
+-(void)setupPanRecognizerWithView:(UIView *)view;
 -(void)handlePanBeganEvent:(UIPanGestureRecognizer*)recognizer;
 -(void)handlePanChangedEvent:(UIPanGestureRecognizer*)recognizer;
 
@@ -23,17 +21,12 @@
 
 @implementation AvatarDragController
 
-@synthesize mView;
-@synthesize mWorldModel;
-
 -(id)initWithView:(UIView *)view andModel:(WorldModel*)worldModel;
 {
-    self = [super init];
+    self = [super initWithView:view andModel:worldModel];
     if (self)
     {
         [self setupPanRecognizerWithView:view];
-        self.mView = view;
-        self.mWorldModel = worldModel;
         mPositionOfAvatarAtStartOfDrag = CGPointZero;
     }
     return self;
@@ -66,7 +59,7 @@
 
 -(void)handlePanBeganEvent:(UIPanGestureRecognizer*)recognizer
 {
-    mPositionOfAvatarAtStartOfDrag = [mWorldModel positionOfAvatar];
+    mPositionOfAvatarAtStartOfDrag = [self.mWorldModel positionOfAvatar];
 }
 
 -(void)handlePanChangedEvent:(UIPanGestureRecognizer*)recognizer
@@ -75,9 +68,9 @@
     NSLog(@"Dragged (%.2f, %.2f)", translation.x, translation.y);
     
     CGPoint newAvatarPosition = CGPointMake(mPositionOfAvatarAtStartOfDrag.x + translation.x, mPositionOfAvatarAtStartOfDrag.y + translation.y);
-    [mWorldModel moveAvatarTo:newAvatarPosition];
+    [self.mWorldModel moveAvatarTo:newAvatarPosition];
     
-    [mView setNeedsDisplay];
+    [self.mView setNeedsDisplay];
 }
 
 @end

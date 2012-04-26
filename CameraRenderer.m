@@ -28,10 +28,14 @@ const CGFloat cBlack[4] = {0.0f, 0.0f, 0.0f, 1.0f};
 - (void) drawViewFrustumOfCamera:(const CameraModel*)camera toContext:(CGContextRef)context
 {
     CGSize lineOfSight = [VectorGeometry vectorFrom:[camera position] to:[camera lookAtPoint]];
-    CGSize normalTolineOfSight = [VectorGeometry normalTo:lineOfSight];
+    CGSize unitNormalTolineOfSight = [VectorGeometry unitVectorInDirectionOf:[VectorGeometry normalTo:lineOfSight]];
+    float distanceFromCameraToLookAt = [VectorGeometry magnitudeOf:lineOfSight];
+    float distanceFromLookAtPointToFrustumVertex = distanceFromCameraToLookAt * tanf([camera fieldOfViewInRadians] / 2);
+    CGSize lookAtPointToLeftFrustumVertex = [VectorGeometry scale:unitNormalTolineOfSight by:distanceFromLookAtPointToFrustumVertex];
+                                      
     
-    CGPoint leftFrustumVertex = [VectorGeometry translate:[camera lookAtPoint] by:normalTolineOfSight];
-    CGPoint rightFrustumVertex = [VectorGeometry translate:[camera lookAtPoint] by:[VectorGeometry negativeOf:normalTolineOfSight]];
+    CGPoint leftFrustumVertex = [VectorGeometry translate:[camera lookAtPoint] by:lookAtPointToLeftFrustumVertex];
+    CGPoint rightFrustumVertex = [VectorGeometry translate:[camera lookAtPoint] by:[VectorGeometry negativeOf:lookAtPointToLeftFrustumVertex]];
     
     CGContextSetStrokeColor(context, cBlack);
     CGContextBeginPath(context);

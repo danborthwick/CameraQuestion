@@ -8,11 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-#import "WorldModel.h"
+#import "WorldController.h"
 
-@interface AvatarDragController : NSObject<UIGestureRecognizerDelegate>
+@interface AvatarDragController : WorldController<UIGestureRecognizerDelegate>
 
--(id)initWithView:(UIView *)view andModel:(WorldModel*)worldModel;
 -(void)handlePanEvent:(UIPanGestureRecognizer*)recognizer;
 
 @end

@@ -72,6 +72,13 @@
     [self updateCamera];
 }
 
+- (void) setCameraFieldOfViewTo:(float)fieldOfView
+{
+    [mCamera setFieldOfViewTo:fieldOfView];
+    [self updateCamera];
+}
+
+
 - (void) updateCamera
 {
     [mCameraController updateCamera:self.mCamera forPoleWithPosition:mPolePosition andAvatarWithPosition:mAvatarPosition];

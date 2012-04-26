@@ -29,6 +29,8 @@
 		2A83BF591548AF2700DBBE24 /* AvatarDragController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A83BF581548AF2700DBBE24 /* AvatarDragController.m */; };
 		2A83BF5C1548BEE100DBBE24 /* CameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A83BF5B1548BEE100DBBE24 /* CameraController.m */; };
 		2A83BF5F1548C86300DBBE24 /* VectorGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A83BF5E1548C86300DBBE24 /* VectorGeometry.m */; };
+		2A83BF62154947E500DBBE24 /* CameraFieldOfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A83BF61154947E500DBBE24 /* CameraFieldOfViewController.m */; };
+		2A83BF651549490F00DBBE24 /* WorldController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A83BF641549490F00DBBE24 /* WorldController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,10 @@
 		2A83BF5B1548BEE100DBBE24 /* CameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraController.m; sourceTree = "<group>"; };
 		2A83BF5D1548C86300DBBE24 /* VectorGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VectorGeometry.h; sourceTree = "<group>"; };
 		2A83BF5E1548C86300DBBE24 /* VectorGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VectorGeometry.m; sourceTree = "<group>"; };
+		2A83BF60154947E500DBBE24 /* CameraFieldOfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraFieldOfViewController.h; sourceTree = "<group>"; };
+		2A83BF61154947E500DBBE24 /* CameraFieldOfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraFieldOfViewController.m; sourceTree = "<group>"; };
+		2A83BF631549490F00DBBE24 /* WorldController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldController.h; sourceTree = "<group>"; };
+		2A83BF641549490F00DBBE24 /* WorldController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,27 +144,11 @@
 		2A83BF0F154871F900DBBE24 /* CameraQuestion */ = {
 			isa = PBXGroup;
 			children = (
-				2A83BF541548A0CD00DBBE24 /* CameraRenderer.h */,
-				2A83BF551548A0CD00DBBE24 /* CameraRenderer.m */,
-				2A83BF4C1548959900DBBE24 /* CameraModel.h */,
-				2A83BF4D1548959900DBBE24 /* CameraModel.m */,
-				2A83BF18154871F900DBBE24 /* NMAppDelegate.h */,
-				2A83BF19154871F900DBBE24 /* NMAppDelegate.m */,
-				2A83BF1B154871F900DBBE24 /* MainStoryboard_iPhone.storyboard */,
-				2A83BF1E154871F900DBBE24 /* MainStoryboard_iPad.storyboard */,
-				2A83BF21154871F900DBBE24 /* NMViewController.h */,
-				2A83BF22154871F900DBBE24 /* NMViewController.m */,
+				2A83BF691549498600DBBE24 /* Application */,
 				2A83BF10154871F900DBBE24 /* Supporting Files */,
-				2A83BF43154873DA00DBBE24 /* WorldPlanView.h */,
-				2A83BF44154873DA00DBBE24 /* WorldPlanView.m */,
-				2A83BF46154874E700DBBE24 /* WorldModel.h */,
-				2A83BF47154874E700DBBE24 /* WorldModel.m */,
-				2A83BF571548AF2700DBBE24 /* AvatarDragController.h */,
-				2A83BF5A1548BEE100DBBE24 /* CameraController.h */,
-				2A83BF5B1548BEE100DBBE24 /* CameraController.m */,
-				2A83BF581548AF2700DBBE24 /* AvatarDragController.m */,
-				2A83BF5D1548C86300DBBE24 /* VectorGeometry.h */,
-				2A83BF5E1548C86300DBBE24 /* VectorGeometry.m */,
+				2A83BF661549491D00DBBE24 /* Controllers */,
+				2A83BF671549493E00DBBE24 /* Models */,
+				2A83BF681549496400DBBE24 /* Views */,
 			);
 			path = CameraQuestion;
 			sourceTree = "<group>";
@@ -191,6 +181,58 @@
 				2A83BF33154871FA00DBBE24 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2A83BF661549491D00DBBE24 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2A83BF571548AF2700DBBE24 /* AvatarDragController.h */,
+				2A83BF581548AF2700DBBE24 /* AvatarDragController.m */,
+				2A83BF5A1548BEE100DBBE24 /* CameraController.h */,
+				2A83BF5B1548BEE100DBBE24 /* CameraController.m */,
+				2A83BF60154947E500DBBE24 /* CameraFieldOfViewController.h */,
+				2A83BF61154947E500DBBE24 /* CameraFieldOfViewController.m */,
+				2A83BF631549490F00DBBE24 /* WorldController.h */,
+				2A83BF641549490F00DBBE24 /* WorldController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2A83BF671549493E00DBBE24 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2A83BF4C1548959900DBBE24 /* CameraModel.h */,
+				2A83BF4D1548959900DBBE24 /* CameraModel.m */,
+				2A83BF46154874E700DBBE24 /* WorldModel.h */,
+				2A83BF47154874E700DBBE24 /* WorldModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2A83BF681549496400DBBE24 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2A83BF541548A0CD00DBBE24 /* CameraRenderer.h */,
+				2A83BF551548A0CD00DBBE24 /* CameraRenderer.m */,
+				2A83BF43154873DA00DBBE24 /* WorldPlanView.h */,
+				2A83BF44154873DA00DBBE24 /* WorldPlanView.m */,
+				2A83BF5D1548C86300DBBE24 /* VectorGeometry.h */,
+				2A83BF5E1548C86300DBBE24 /* VectorGeometry.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2A83BF691549498600DBBE24 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				2A83BF18154871F900DBBE24 /* NMAppDelegate.h */,
+				2A83BF19154871F900DBBE24 /* NMAppDelegate.m */,
+				2A83BF1B154871F900DBBE24 /* MainStoryboard_iPhone.storyboard */,
+				2A83BF1E154871F900DBBE24 /* MainStoryboard_iPad.storyboard */,
+				2A83BF21154871F900DBBE24 /* NMViewController.h */,
+				2A83BF22154871F900DBBE24 /* NMViewController.m */,
+			);
+			name = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +352,8 @@
 				2A83BF591548AF2700DBBE24 /* AvatarDragController.m in Sources */,
 				2A83BF5C1548BEE100DBBE24 /* CameraController.m in Sources */,
 				2A83BF5F1548C86300DBBE24 /* VectorGeometry.m in Sources */,
+				2A83BF62154947E500DBBE24 /* CameraFieldOfViewController.m in Sources */,
+				2A83BF651549490F00DBBE24 /* WorldController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
