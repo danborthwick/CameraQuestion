@@ -21,8 +21,8 @@
 {
     CGSize avatarToPole = [VectorGeometry vectorFrom:avatarPosition to:polePosition];
     float distanceOfAvatarFromPole = [VectorGeometry magnitudeOf:avatarToPole];
-    float quarterFieldOfView = [camera fieldOfViewInRadians] / 4.0f;
-    float distanceOfCameraFromPole = distanceOfAvatarFromPole / tanf(quarterFieldOfView);
+    float halfFieldOfView = [camera fieldOfViewInRadians] / 2.0f;
+    float distanceOfCameraFromPole = 2 * distanceOfAvatarFromPole / tanf(halfFieldOfView);
     
     CGSize vectorInDirectionFromPoleToCamera = [VectorGeometry normalTo:avatarToPole];
     CGSize unitVectorFromPoleToCamera = [VectorGeometry unitVectorInDirectionOf:vectorInDirectionFromPoleToCamera];
